@@ -15,7 +15,7 @@ function addToDo(event) {
   const completedBtn = document.createElement('button');
   completedBtn.innerText = 'Complete';
   completedBtn.classList.add('complete-btn');
-  todoDiv.appendChild(completedBtn);
+  newToDo.appendChild(completedBtn);
   const trashBtn = document.createElement('button');
   trashBtn.innerText = 'Trash';
   trashBtn.classList.add('trash-btn');
