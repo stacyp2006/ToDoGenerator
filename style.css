@@ -90,6 +90,9 @@ form {
 }
 
 .todo li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex: 1;
 }
 
@@ -100,4 +103,9 @@ button {
   padding: 5px;
   cursor: pointer;
   margin: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
