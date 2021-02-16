@@ -9,22 +9,16 @@
   </head>
   <body>
     <header>
-      <h1>To Do List Generator</h1>
-      <button class="new-list-btn" type="submit">
-        Create a new to do list
-      </button>
+      <h1>To Do List</h1>
     </header>
-    <section class="list-container">
-      <form class="todo-list">
-        <input type="text" class="title-entry" placeholder="Enter list title" />
-        <button class="title-btn" type="submit">Submit</button>
-      </form>
-      <div>
-        <h2 class="list-title"></h2>
-        <input type="text" class="todo-item" />
-        <ul class="item-list"></ul>
-        <button class="new-todo-btn" type="submit">Add a to do item</button>
+    <section>
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
       </div>
+      <form>
+        <input type="text" class="todo-input" placeholder="Enter a todo!" />
+        <button class="todo-button" type="submit">Add to do</button>
+      </form>
     </section>
   </body>
   <script src="script.js"></script>
