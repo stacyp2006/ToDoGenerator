@@ -94,6 +94,7 @@ form {
   justify-content: space-between;
   align-items: center;
   flex: 1;
+  transition: all 1s ease;
 }
 
 button {
