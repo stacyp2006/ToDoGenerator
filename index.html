@@ -10,14 +10,20 @@
   <body>
     <header>
       <h1>To Do List Generator</h1>
-      <button class="new-list-btn">Create a new to do list</button>
+      <button class="new-list-btn" type="submit">
+        Create a new to do list
+      </button>
     </header>
     <section class="list-container">
-      <div class="todo-list" hidden>
+      <form class="todo-list">
         <input type="text" class="title-entry" placeholder="Enter list title" />
+        <button class="title-btn" type="submit">Submit</button>
+      </form>
+      <div>
         <h2 class="list-title"></h2>
         <input type="text" class="todo-item" />
-        <button class="new-todo-btn">Add a to do item</button>
+        <ul class="item-list"></ul>
+        <button class="new-todo-btn" type="submit">Add a to do item</button>
       </div>
     </section>
   </body>
