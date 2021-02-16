@@ -41,6 +41,14 @@ h1 {
   margin-right: 50px;
 }
 
+.new-list-btn:focus {
+  outline: 0;
+}
+
+.new-list-btn:active {
+  transform: scale(0.95);
+}
+
 hidden {
   display: none;
 }
