@@ -29,6 +29,7 @@ function deleteCheck(event) {
   const item = event.target;
   if (item.classList[0] === 'trash-btn') {
     const todo = item.parentElement;
+    removeLocalTodos(todo);
     todo.remove();
   }
 
@@ -79,4 +80,16 @@ function getTodos() {
     todoDiv.appendChild(trashBtn);
     todoList.appendChild(todoDiv);
   });
+}
+
+function removeLocalTodos(todo) {
+  let todos;
+  if (localStorage.getItem('todos') === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem('todos'));
+  }
+  const todoIndex = todo.children[0].innerText;
+  todos.splice(todos.indexOf(todoIndex, 1));
+  localStorage.setItem('todos', JSON.stringify(todos));
 }
