@@ -12,6 +12,7 @@ function addToDo(event) {
   newToDo.innerText = todoInput.value;
   newToDo.classList.add('todo-item');
   todoDiv.appendChild(newToDo);
+  saveLocalToDos(todoInput.value);
   const completedBtn = document.createElement('button');
   completedBtn.innerText = 'Complete';
   completedBtn.classList.add('complete-btn');
@@ -38,6 +39,7 @@ function deleteCheck(event) {
 }
 
 //Event Listeners
+document.addEventListener('DOMContentLoaded', getTodos);
 todoButton.addEventListener('click', addToDo);
 todoList.addEventListener('click', deleteCheck);
 
@@ -51,4 +53,30 @@ function saveLocalToDos(todo) {
   }
   todos.push(todo);
   localStorage.setItem('todos', JSON.stringify(todos));
+}
+
+function getTodos() {
+  let todos;
+  if (localStorage.getItem('todos') === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem('todos'));
+  }
+  todos.forEach(function (todo) {
+    const todoDiv = document.createElement('div');
+    todoDiv.classList.add('todo');
+    const newToDo = document.createElement('li');
+    newToDo.innerText = todo;
+    newToDo.classList.add('todo-item');
+    todoDiv.appendChild(newToDo);
+    const completedBtn = document.createElement('button');
+    completedBtn.innerText = 'Complete';
+    completedBtn.classList.add('complete-btn');
+    newToDo.appendChild(completedBtn);
+    const trashBtn = document.createElement('button');
+    trashBtn.innerText = 'Trash';
+    trashBtn.classList.add('trash-btn');
+    todoDiv.appendChild(trashBtn);
+    todoList.appendChild(todoDiv);
+  });
 }
