@@ -40,3 +40,15 @@ function deleteCheck(event) {
 //Event Listeners
 todoButton.addEventListener('click', addToDo);
 todoList.addEventListener('click', deleteCheck);
+
+//Local Storage
+function saveLocalToDos(todo) {
+  let todos;
+  if (localStorage.getItem('todos') === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem('todos'));
+  }
+  todos.push(todo);
+  localStorage.setItem('todos', JSON.stringify(todos));
+}
