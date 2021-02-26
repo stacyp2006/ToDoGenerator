@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #a8b4a5;
+  background-color: #1f80f4;
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  background-color: #9d6a89;
+  background-color: #59bec2;
   font-size: 30px;
   color: ivory;
   width: 100%;
@@ -54,7 +54,7 @@ form {
 }
 
 .todo-container {
-  background-color: #efbc9b;
+  background-color: #c2d0d9;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   padding: 10px;
