@@ -12,7 +12,6 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-  /* padding: 20px; */
 }
 
 header {
@@ -126,15 +125,6 @@ form {
   flex: 1;
   transition: all 1s ease;
 }
-
-/* button {
-  background-color: ivory;
-  border: 0;
-  border-radius: 10px;
-  padding: 5px;
-  cursor: pointer;
-  margin: 5px;
-} */
 
 .completed {
   text-decoration: line-through;
